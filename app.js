@@ -11,7 +11,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 const items = [];
-const workItems = [];
+let workItems = [];
 
 app.get("/", function (req, res) {
   res.render("list", { listTitle: date.getDate(), newListItems: items });
